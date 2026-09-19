@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="استمارة حجز رحلات سياحية في مصر - الأهرامات، كروز النيل، وشواطئ البحر الأحمر. تصميم خالص بـ HTML و CSS.">
-  <title>استمارة حجز رحلة في مصر | Pure HTML & CSS</title>
-  
+  <meta name="description"
+    content="استمارة حجز رحلات سياحية في مصر - الأهرامات، كروز النيل، وشواطئ البحر الأحمر. تصميم خالص بـ HTML و CSS.">
+  <title>استمارة حجز رحلة في مصر</title>
+
   <!-- Google Fonts: Cairo & Alexandria -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Ambient Glow Effects (Pure CSS) -->
@@ -25,7 +30,7 @@
   <div class="ambient-glow glow-center"></div>
 
   <div class="page-container">
-    
+
     <!-- Hero Header -->
     <header class="page-header">
       <div class="luxury-badge">
@@ -36,7 +41,8 @@
         احجز رحلتك الاستثنائية في <span class="gold-text">مِصْر</span>
       </h1>
       <p class="hero-description">
-        استمتع بتجربة سياحية تاريخية وبحرية ساحرة بين أهرامات الجيزة، مزارات الأقصر وأسوان، وشواطئ البحر الأحمر الفيروزية.
+        استمتع بتجربة سياحية تاريخية وبحرية ساحرة بين أهرامات الجيزة، مزارات الأقصر وأسوان، وشواطئ البحر الأحمر
+        الفيروزية.
       </p>
 
       <!-- Trust Badges -->
@@ -58,7 +64,7 @@
 
     <!-- Main Content: Form + Sidebar -->
     <main class="booking-layout">
-      
+
       <!-- Pure HTML Form -->
       <section class="form-wrapper">
         <form action="#booking-success" method="GET" class="trip-booking-form">
@@ -74,7 +80,7 @@
             </legend>
 
             <div class="cards-radio-grid">
-              
+
               <!-- الوجهة 1: القاهرة والأهرامات -->
               <label class="destination-option" for="dest-cairo">
                 <input type="radio" id="dest-cairo" name="destination" value="cairo" checked>
@@ -172,7 +178,7 @@
             </legend>
 
             <div class="fields-grid">
-              
+
               <!-- الاسم بالكامل -->
               <div class="field-item">
                 <label for="fullName">
@@ -200,7 +206,7 @@
                   <span>رقم الهاتف / الواتساب</span>
                   <span class="star">*</span>
                 </label>
-                <input type="tel" id="phoneNumber" name="phone" placeholder="+20 100 123 4567" required>
+                <input type="tel" id="phoneNumber" name="phone" placeholder="+20 1040606031" required>
               </div>
 
               <!-- الجنسية ودولة الإقامة -->
@@ -244,7 +250,7 @@
             </legend>
 
             <div class="fields-grid">
-              
+
               <!-- تاريخ المغادرة -->
               <div class="field-item">
                 <label for="tripDate">
@@ -302,7 +308,7 @@
 
             <!-- أعداد المسافرين (Pure HTML Numbers) -->
             <div class="passengers-counter-grid">
-              
+
               <div class="passenger-card">
                 <div class="passenger-label-box">
                   <span class="p-title">عدد البالغين (+12 سنة)</span>
@@ -338,7 +344,7 @@
             </legend>
 
             <div class="addons-list">
-              
+
               <!-- خدمة 1 -->
               <label class="addon-item" for="addon-guide">
                 <input type="checkbox" id="addon-guide" name="addons[]" value="private-guide">
@@ -409,7 +415,8 @@
                 <i class="fa-regular fa-comment-dots"></i>
                 <span>ملاحظات إضافية أو استفسارات</span>
               </label>
-              <textarea id="clientNotes" name="notes" rows="3" placeholder="اكتب هنا أي تفاصيل إضافية تحب أن نراعيها أثناء ترتيب رحلتك..."></textarea>
+              <textarea id="clientNotes" name="notes" rows="3"
+                placeholder="اكتب هنا أي تفاصيل إضافية تحب أن نراعيها أثناء ترتيب رحلتك..."></textarea>
             </div>
 
             <!-- موافقة الشروط -->
@@ -417,7 +424,8 @@
               <label class="agreement-label" for="termsCheckbox">
                 <input type="checkbox" id="termsCheckbox" name="agreeTerms" required checked>
                 <span>
-                  أقر بأن البيانات المدخلة صحيحة، وأوافق على <a href="#terms-modal">شروط الحجز والإلغاء</a> الخاصة برحلات جمهورية مصر العربية.
+                  أقر بأن البيانات المدخلة صحيحة، وأوافق على <a href="#terms-modal">شروط الحجز والإلغاء</a> الخاصة
+                  برحلات جمهورية مصر العربية.
                 </span>
               </label>
             </div>
@@ -445,7 +453,7 @@
       <!-- شريط الملخص الجانبي (Pure HTML & CSS Presentation) -->
       <aside class="sidebar-summary">
         <div class="summary-card">
-          
+
           <div class="summary-top">
             <div class="summary-crown">
               <i class="fa-solid fa-receipt"></i>
@@ -496,7 +504,7 @@
           <div class="contact-box">
             <div class="support-title">هل لديك أي استفسار عاجل؟</div>
             <p class="support-desc">فريق مستشاري السياحة في مصر جاهز لمساعدتك عبر الواتساب على مدار الساعة.</p>
-            <a href="https://wa.me/201000000000" target="_blank" class="whatsapp-btn">
+            <a href="https://wa.me/201040606031" target="_blank" class="whatsapp-btn">
               <i class="fa-brands fa-whatsapp"></i>
               <span>محادثة واتساب مباشرة</span>
             </a>
@@ -508,61 +516,60 @@
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
-      <p class="footer-brand">🇪🇬 رحلات مصر السياحية الفاخرة | Egypt Travel Explorer</p>
-      <p class="footer-credits">تصميم حصري عالي الفخامة بـ HTML5 و CSS3 فقط • بدون أي جافا سكربت (100% Pure HTML & CSS)</p>
-    </footer>
 
-  </div>
 
-  <!-- Pure CSS Modal: الشروط والأحكام (يفتح عبر :target) -->
-  <div id="terms-modal" class="css-modal">
-    <div class="modal-inner">
-      <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
-      <div class="modal-header">
-        <i class="fa-solid fa-scroll gold-text"></i>
-        <h3>شروط وأحكام حجز الرحلات</h3>
-      </div>
-      <div class="modal-content">
-        <p>1. <strong>تأكيد الحجز:</strong> يتم مراجعة الحجز فور إرسال الاستمارة والتواصل معك عبر الواتساب أو الهاتف خلال دقائق لتأكيد المواعيد النهائية.</p>
-        <p>2. <strong>الإلغاء والتعديل:</strong> الإلغاء مجاني بالكامل حتى 48 ساعة قبل موعد بدء الرحلة المقرر.</p>
-        <p>3. <strong>التأشيرات والدخول:</strong> تساعد شركتنا جميع المسافرين في إصدار تأشيرة الدخول الإلكترونية لمصر (Egypt E-Visa).</p>
-        <p>4. <strong>الأمان والراحة:</strong> جميع رحلاتنا وجولاتنا مرخصة بالكامل من وزارة السياحة والآثار المصرية.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="btn-modal-ok">فهمت وموافق</a>
+    <!-- Pure CSS Modal: الشروط والأحكام (يفتح عبر :target) -->
+    <div id="terms-modal" class="css-modal">
+      <div class="modal-inner">
+        <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
+        <div class="modal-header">
+          <i class="fa-solid fa-scroll gold-text"></i>
+          <h3>شروط وأحكام حجز الرحلات</h3>
+        </div>
+        <div class="modal-content">
+          <p>1. <strong>تأكيد الحجز:</strong> يتم مراجعة الحجز فور إرسال الاستمارة والتواصل معك عبر الواتساب أو الهاتف
+            خلال دقائق لتأكيد المواعيد النهائية.</p>
+          <p>2. <strong>الإلغاء والتعديل:</strong> الإلغاء مجاني بالكامل حتى 48 ساعة قبل موعد بدء الرحلة المقرر.</p>
+          <p>3. <strong>التأشيرات والدخول:</strong> تساعد شركتنا جميع المسافرين في إصدار تأشيرة الدخول الإلكترونية لمصر
+            (Egypt E-Visa).</p>
+          <p>4. <strong>الأمان والراحة:</strong> جميع رحلاتنا وجولاتنا مرخصة بالكامل من وزارة السياحة والآثار المصرية.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="btn-modal-ok">فهمت وموافق</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Pure CSS Modal: رسالة النجاح بعد الإرسال (يفتح عبر :target) -->
-  <div id="booking-success" class="css-modal">
-    <div class="modal-inner ticket-style">
-      <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
-      <div class="modal-header success-head">
-        <div class="check-circle"><i class="fa-solid fa-check"></i></div>
-        <h3>تم استلام طلب حجزك بنجاح!</h3>
-        <p class="success-subtitle">أهلاً بك في أرض الحضارات! سنقوم بالتواصل معك لتأكيد جدول الرحلة.</p>
-      </div>
-      <div class="modal-content ticket-details">
-        <div class="ticket-row">
-          <span>حالة الحجز:</span>
-          <strong class="gold-text">مؤكد مبدئياً ✨</strong>
+    <!-- Pure CSS Modal: رسالة النجاح بعد الإرسال (يفتح عبر :target) -->
+    <div id="booking-success" class="css-modal">
+      <div class="modal-inner ticket-style">
+        <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
+        <div class="modal-header success-head">
+          <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+          <h3>تم استلام طلب حجزك بنجاح!</h3>
+          <p class="success-subtitle">أهلاً بك في أرض الحضارات! سنقوم بالتواصل معك لتأكيد جدول الرحلة.</p>
         </div>
-        <div class="ticket-row">
-          <span>رقم المعاملة:</span>
-          <strong>#EG-2026-CONFIRM</strong>
+        <div class="modal-content ticket-details">
+          <div class="ticket-row">
+            <span>حالة الحجز:</span>
+            <strong class="gold-text">مؤكد مبدئياً ✨</strong>
+          </div>
+          <div class="ticket-row">
+            <span>رقم المعاملة:</span>
+            <strong>#EG-2026-CONFIRM</strong>
+          </div>
+          <div class="ticket-row">
+            <span>المتابعة:</span>
+            <span>سيتصل بك مستشار الرحلة خلال 15 دقيقة</span>
+          </div>
         </div>
-        <div class="ticket-row">
-          <span>المتابعة:</span>
-          <span>سيتصل بك مستشار الرحلة خلال 15 دقيقة</span>
+        <div class="modal-footer">
+          <a href="#!" class="btn-modal-ok">العودة إلى الصفحة</a>
         </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="btn-modal-ok">العودة إلى الصفحة</a>
       </div>
     </div>
-  </div>
 
 </body>
+
 </html>
