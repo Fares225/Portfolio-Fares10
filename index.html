@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="استمارة حجز رحلات سياحية في مصر - الأهرامات، كروز النيل، وشواطئ البحر الأحمر. تصميم خالص بـ HTML و CSS.">
+  <title>استمارة حجز رحلة في مصر | Pure HTML & CSS</title>
+  
+  <!-- Google Fonts: Cairo & Alexandria -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects (Pure CSS) -->
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <div class="page-container">
+    
+    <!-- Hero Header -->
+    <header class="page-header">
+      <div class="luxury-badge">
+        <i class="fa-solid fa-crown"></i>
+        <span>بوابة استكشاف أرض الفراعنة</span>
+      </div>
+      <h1 class="hero-title">
+        احجز رحلتك الاستثنائية في <span class="gold-text">مِصْر</span>
+      </h1>
+      <p class="hero-description">
+        استمتع بتجربة سياحية تاريخية وبحرية ساحرة بين أهرامات الجيزة، مزارات الأقصر وأسوان، وشواطئ البحر الأحمر الفيروزية.
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="trust-list">
+        <div class="trust-item">
+          <i class="fa-solid fa-certificate"></i>
+          <span>حجز معتمد 100%</span>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>استقبال وتوديع بالمطار</span>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>دعم وإرشاد سياحي متواصل</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content: Form + Sidebar -->
+    <main class="booking-layout">
+      
+      <!-- Pure HTML Form -->
+      <section class="form-wrapper">
+        <form action="#booking-success" method="GET" class="trip-booking-form">
+
+          <!-- الخطوة 1: اختيار الوجهة -->
+          <fieldset class="form-block">
+            <legend class="block-legend">
+              <span class="step-badge">1</span>
+              <div>
+                <span class="legend-heading">اختر وجهتك المفضلة في مصر</span>
+                <span class="legend-sub">انقر على البطاقة لتحديد وجهة رحلتك الرئيسية</span>
+              </div>
+            </legend>
+
+            <div class="cards-radio-grid">
+              
+              <!-- الوجهة 1: القاهرة والأهرامات -->
+              <label class="destination-option" for="dest-cairo">
+                <input type="radio" id="dest-cairo" name="destination" value="cairo" checked>
+                <div class="card-box">
+                  <div class="card-media">
+                    <img src="images/pyramids.jpg" alt="أهرامات الجيزة والقاهرة">
+                    <span class="chip-badge">الأكثر زيارة ⭐</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-title">القاهرة والجيزة الذهبية</h3>
+                    <p class="card-desc">الأهرامات، أبو الهول، والمتحف المصري الكبير وسفاري الصحراء.</p>
+                    <div class="card-footer-info">
+                      <span class="rate-label">ابتداءً من:</span>
+                      <span class="rate-number">320$ <small>/ للفرد</small></span>
+                    </div>
+                  </div>
+                  <span class="selection-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+              </label>
+
+              <!-- الوجهة 2: الأقصر وأسوان والنيل -->
+              <label class="destination-option" for="dest-luxor">
+                <input type="radio" id="dest-luxor" name="destination" value="luxor">
+                <div class="card-box">
+                  <div class="card-media">
+                    <img src="images/luxor.jpg" alt="الأقصر وأسوان كروز النيل">
+                    <span class="chip-badge">كروز نيلية فاخرة 🚢</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-title">الأقصر وأسوان والنيل</h3>
+                    <p class="card-desc">معابد الكرنك، وادي الملوك، وإبحار في النيل على متن فندق عائم.</p>
+                    <div class="card-footer-info">
+                      <span class="rate-label">ابتداءً من:</span>
+                      <span class="rate-number">480$ <small>/ للفرد</small></span>
+                    </div>
+                  </div>
+                  <span class="selection-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+              </label>
+
+              <!-- الوجهة 3: شرم الشيخ والغردقة -->
+              <label class="destination-option" for="dest-sharm">
+                <input type="radio" id="dest-sharm" name="destination" value="sharm">
+                <div class="card-box">
+                  <div class="card-media">
+                    <img src="images/sharm.jpg" alt="شرم الشيخ والبحر الأحمر">
+                    <span class="chip-badge">استجمام وغوص 🐠</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-title">شرم الشيخ والبحر الأحمر</h3>
+                    <p class="card-desc">شواطئ فيروزية ساحرة، غوص بين الشعاب المرجانية، ومنتجعات راقية.</p>
+                    <div class="card-footer-info">
+                      <span class="rate-label">ابتداءً من:</span>
+                      <span class="rate-number">390$ <small>/ للفرد</small></span>
+                    </div>
+                  </div>
+                  <span class="selection-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+              </label>
+
+              <!-- الوجهة 4: الباقة الملكية الشاملة -->
+              <label class="destination-option" for="dest-royal">
+                <input type="radio" id="dest-royal" name="destination" value="royal">
+                <div class="card-box royal-highlight">
+                  <div class="card-media royal-media">
+                    <div class="royal-banner">
+                      <i class="fa-solid fa-gem"></i>
+                      <span>جولة مصر الكبرى VIP</span>
+                    </div>
+                    <span class="chip-badge">الباقة الشاملة 👑</span>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="card-title">جولة الفراعنة الملكية الكاملة</h3>
+                    <p class="card-desc">القاهرة + كروز النيل في الأقصر وأسوان + استجمام شرم الشيخ.</p>
+                    <div class="card-footer-info">
+                      <span class="rate-label">ابتداءً من:</span>
+                      <span class="rate-number">890$ <small>/ للفرد</small></span>
+                    </div>
+                  </div>
+                  <span class="selection-check"><i class="fa-solid fa-check"></i></span>
+                </div>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- الخطوة 2: بيانات المسافر الرئيسي -->
+          <fieldset class="form-block">
+            <legend class="block-legend">
+              <span class="step-badge">2</span>
+              <div>
+                <span class="legend-heading">بيانات المسافر الرئيسي</span>
+                <span class="legend-sub">للتواصل وتأكيد وثيقة الحجز والتنسيق المباشر</span>
+              </div>
+            </legend>
+
+            <div class="fields-grid">
+              
+              <!-- الاسم بالكامل -->
+              <div class="field-item">
+                <label for="fullName">
+                  <i class="fa-regular fa-user"></i>
+                  <span>الاسم بالكامل</span>
+                  <span class="star">*</span>
+                </label>
+                <input type="text" id="fullName" name="fullName" placeholder="مثال: أحمد مصطفى سالم" required>
+              </div>
+
+              <!-- البريد الإلكتروني -->
+              <div class="field-item">
+                <label for="emailAddress">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span>البريد الإلكتروني</span>
+                  <span class="star">*</span>
+                </label>
+                <input type="email" id="emailAddress" name="email" placeholder="example@domain.com" required>
+              </div>
+
+              <!-- رقم الهاتف / واتساب -->
+              <div class="field-item">
+                <label for="phoneNumber">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>رقم الهاتف / الواتساب</span>
+                  <span class="star">*</span>
+                </label>
+                <input type="tel" id="phoneNumber" name="phone" placeholder="+20 100 123 4567" required>
+              </div>
+
+              <!-- الجنسية ودولة الإقامة -->
+              <div class="field-item">
+                <label for="nationality">
+                  <i class="fa-solid fa-earth-africa"></i>
+                  <span>الجنسية / الدولة</span>
+                  <span class="star">*</span>
+                </label>
+                <select id="nationality" name="nationality" required>
+                  <option value="" disabled selected>اختر الجنسية...</option>
+                  <option value="EG">جمهورية مصر العربية</option>
+                  <option value="SA">المملكة العربية السعودية</option>
+                  <option value="AE">الإمارات العربية المتحدة</option>
+                  <option value="KW">الكويت</option>
+                  <option value="QA">قطر</option>
+                  <option value="OM">سلطنة عمان</option>
+                  <option value="BH">مملكة البحرين</option>
+                  <option value="JO">الأردن</option>
+                  <option value="IQ">العراق</option>
+                  <option value="MA">المغرب العربي</option>
+                  <option value="US">الولايات المتحدة الأمريكية</option>
+                  <option value="UK">المملكة المتحدة</option>
+                  <option value="DE">ألمانيا</option>
+                  <option value="FR">فرنسا</option>
+                  <option value="OTHER">دولة أخرى</option>
+                </select>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- الخطوة 3: تفاصيل ومواعيد الرحلة -->
+          <fieldset class="form-block">
+            <legend class="block-legend">
+              <span class="step-badge">3</span>
+              <div>
+                <span class="legend-heading">تفاصيل ومواعيد الرحلة</span>
+                <span class="legend-sub">اختر تاريخ السفر، مدة الإقامة، ومستوى الفندق</span>
+              </div>
+            </legend>
+
+            <div class="fields-grid">
+              
+              <!-- تاريخ المغادرة -->
+              <div class="field-item">
+                <label for="tripDate">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span>تاريخ بدء الرحلة</span>
+                  <span class="star">*</span>
+                </label>
+                <input type="date" id="tripDate" name="tripDate" required>
+              </div>
+
+              <!-- مدة الإقامة -->
+              <div class="field-item">
+                <label for="tripDuration">
+                  <i class="fa-regular fa-clock"></i>
+                  <span>مدة الرحلة</span>
+                  <span class="star">*</span>
+                </label>
+                <select id="tripDuration" name="duration" required>
+                  <option value="4">4 أيام / 3 ليالٍ (جولة سريعة ومكثفة)</option>
+                  <option value="7" selected>7 أيام / 6 ليالٍ (البرنامج الأسبوعي المميز)</option>
+                  <option value="10">10 أيام / 9 ليالٍ (شاملة المعالم والاستجمام)</option>
+                  <option value="14">14 يوماً / أسبوعين (الجولة الشاملة لجميع المحافظات)</option>
+                </select>
+              </div>
+
+              <!-- مستوى الفندق / الإقامة -->
+              <div class="field-item">
+                <label for="hotelStandard">
+                  <i class="fa-solid fa-hotel"></i>
+                  <span>فئة الإقامة المفضلة</span>
+                </label>
+                <select id="hotelStandard" name="hotelTier">
+                  <option value="5-luxury" selected>فنادق ومنتجعات 5 نجوم ديلوكس (Ultra Luxury)</option>
+                  <option value="5-standard">فنادق 5 نجوم راقية (Premium)</option>
+                  <option value="4-standard">فنادق 4 نجوم ممتازة (Superior)</option>
+                  <option value="nile-cruise">كروز نيلية عائمة 5 نجوم</option>
+                </select>
+              </div>
+
+              <!-- نمط الرحلة -->
+              <div class="field-item">
+                <label for="tripTheme">
+                  <i class="fa-solid fa-compass"></i>
+                  <span>طابع ونمط الرحلة</span>
+                </label>
+                <select id="tripTheme" name="theme">
+                  <option value="cultural" selected>تاريخي وثقافي واكتشاف الآثار</option>
+                  <option value="relaxation">استجمام وشواطئ وراحة</option>
+                  <option value="safari">مغامرات وسفاري وتخييم صحراوي</option>
+                  <option value="family">برنامج عائلي ترفيهي متكامل</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- أعداد المسافرين (Pure HTML Numbers) -->
+            <div class="passengers-counter-grid">
+              
+              <div class="passenger-card">
+                <div class="passenger-label-box">
+                  <span class="p-title">عدد البالغين (+12 سنة)</span>
+                  <span class="p-desc">تذكرة وإقامة كاملة</span>
+                </div>
+                <div class="p-input-box">
+                  <input type="number" id="adultsNum" name="adults" min="1" max="25" value="2" required>
+                </div>
+              </div>
+
+              <div class="passenger-card">
+                <div class="passenger-label-box">
+                  <span class="p-title">عدد الأطفال (2 - 11 سنة)</span>
+                  <span class="p-desc">خصم خاص 50%</span>
+                </div>
+                <div class="p-input-box">
+                  <input type="number" id="kidsNum" name="kids" min="0" max="15" value="0">
+                </div>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <!-- الخطوة 4: خدمات وباقات إضافية VIP -->
+          <fieldset class="form-block">
+            <legend class="block-legend">
+              <span class="step-badge">4</span>
+              <div>
+                <span class="legend-heading">خدمات وتجارب إضافية (اختياري)</span>
+                <span class="legend-sub">حدد الخدمات الإضافية التي تود إدراجها ضمن باقتك</span>
+              </div>
+            </legend>
+
+            <div class="addons-list">
+              
+              <!-- خدمة 1 -->
+              <label class="addon-item" for="addon-guide">
+                <input type="checkbox" id="addon-guide" name="addons[]" value="private-guide">
+                <div class="addon-body">
+                  <div class="addon-icon"><i class="fa-solid fa-landmark"></i></div>
+                  <div class="addon-info">
+                    <span class="addon-title">مرشد سياحي أثري خاص ومرافق</span>
+                    <span class="addon-desc">شرح تاريخي مفصل وحصري بجميع اللغات دون انتظار</span>
+                  </div>
+                </div>
+                <span class="addon-cost">+50$</span>
+              </label>
+
+              <!-- خدمة 2 -->
+              <label class="addon-item" for="addon-vip-car">
+                <input type="checkbox" id="addon-vip-car" name="addons[]" value="vip-transfer" checked>
+                <div class="addon-body">
+                  <div class="addon-icon"><i class="fa-solid fa-car-rear"></i></div>
+                  <div class="addon-info">
+                    <span class="addon-title">استقبال VIP وتوصيل سيارة خاصة فارهة</span>
+                    <span class="addon-desc">استقبال من صالة الوصول بالمطار مع سائق خاص</span>
+                  </div>
+                </div>
+                <span class="addon-cost">+40$</span>
+              </label>
+
+              <!-- خدمة 3 -->
+              <label class="addon-item" for="addon-hotair">
+                <input type="checkbox" id="addon-hotair" name="addons[]" value="balloon">
+                <div class="addon-body">
+                  <div class="addon-icon"><i class="fa-solid fa-wind"></i></div>
+                  <div class="addon-info">
+                    <span class="addon-title">رحلة المنطاد الطائر فجراً بالأقصر</span>
+                    <span class="addon-desc">إطلالة ساحرة عند الشروق على وادي الملوك ومعابد طيبة</span>
+                  </div>
+                </div>
+                <span class="addon-cost">+95$</span>
+              </label>
+
+              <!-- خدمة 4 -->
+              <label class="addon-item" for="addon-cruise-dinner">
+                <input type="checkbox" id="addon-cruise-dinner" name="addons[]" value="nile-dinner">
+                <div class="addon-body">
+                  <div class="addon-icon"><i class="fa-solid fa-utensils"></i></div>
+                  <div class="addon-info">
+                    <span class="addon-title">عشاء فاخر في يخت نيلي مع عروض فلكلور</span>
+                    <span class="addon-desc">بوفيه مفتوح مع إطلالة مسائية ساحرة على أضواء القاهرة</span>
+                  </div>
+                </div>
+                <span class="addon-cost">+45$</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- الخطوة 5: ملاحظات والموافقة والإرسال -->
+          <fieldset class="form-block">
+            <legend class="block-legend">
+              <span class="step-badge">5</span>
+              <div>
+                <span class="legend-heading">ملاحظات وطلبات خاصة</span>
+                <span class="legend-sub">هل لديك أي طلبات غذائية أو مناسبة خاصة ترغب في الاحتفال بها؟</span>
+              </div>
+            </legend>
+
+            <div class="field-item full-width">
+              <label for="clientNotes">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>ملاحظات إضافية أو استفسارات</span>
+              </label>
+              <textarea id="clientNotes" name="notes" rows="3" placeholder="اكتب هنا أي تفاصيل إضافية تحب أن نراعيها أثناء ترتيب رحلتك..."></textarea>
+            </div>
+
+            <!-- موافقة الشروط -->
+            <div class="agreement-box">
+              <label class="agreement-label" for="termsCheckbox">
+                <input type="checkbox" id="termsCheckbox" name="agreeTerms" required checked>
+                <span>
+                  أقر بأن البيانات المدخلة صحيحة، وأوافق على <a href="#terms-modal">شروط الحجز والإلغاء</a> الخاصة برحلات جمهورية مصر العربية.
+                </span>
+              </label>
+            </div>
+
+            <!-- زر الإرسال الرئيسي -->
+            <div class="submit-action-box">
+              <button type="submit" class="gold-submit-btn">
+                <span class="btn-text-wrap">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>تأكيد طلب حجز الرحلة الآن</span>
+                </span>
+                <span class="btn-glow-layer"></span>
+              </button>
+              <div class="privacy-note">
+                <i class="fa-solid fa-shield-check"></i>
+                <span>بياناتك مؤمنة ومشفرة تماماً • تأكيد سريع وبدون رسوم دفع مسبق</span>
+              </div>
+            </div>
+
+          </fieldset>
+
+        </form>
+      </section>
+
+      <!-- شريط الملخص الجانبي (Pure HTML & CSS Presentation) -->
+      <aside class="sidebar-summary">
+        <div class="summary-card">
+          
+          <div class="summary-top">
+            <div class="summary-crown">
+              <i class="fa-solid fa-receipt"></i>
+              <span>باقة الرحلات الملكية</span>
+            </div>
+            <h2 class="summary-header-title">ملخص مميزات حجزك</h2>
+          </div>
+
+          <!-- بطاقة المعاينة البصرية لأبرز المعالم -->
+          <div class="preview-visual">
+            <img src="images/pyramids.jpg" alt="أهرامات مصر">
+            <div class="visual-gradient">
+              <span class="visual-tag">مصر الأسطورية</span>
+              <span class="visual-title">عجائب الحضارة والطبيعة</span>
+            </div>
+          </div>
+
+          <!-- قائمة الخدمات المضمنة في الباقة -->
+          <div class="package-features">
+            <h3 class="features-title">ما تشمله رحلتك معنا:</h3>
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>إقامة بفنادق ومنتجعات مصنفة 5 نجوم ديلوكس</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>تذاكر دخول جميع المزارات والمتاحف الأثرية المحددة</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>انتقالات خاصة بسيارات حديثة ومكيفة طوال الرحلة</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>وجبات إفطار يومية ومأكولات مصرية تقليدية شهيرة</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>تأمين سفر سياحي شامل طوال فترة الإقامة</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr class="summary-separator">
+
+          <!-- صندوق الضمان والمساعدة -->
+          <div class="contact-box">
+            <div class="support-title">هل لديك أي استفسار عاجل؟</div>
+            <p class="support-desc">فريق مستشاري السياحة في مصر جاهز لمساعدتك عبر الواتساب على مدار الساعة.</p>
+            <a href="https://wa.me/201000000000" target="_blank" class="whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>محادثة واتساب مباشرة</span>
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <p class="footer-brand">🇪🇬 رحلات مصر السياحية الفاخرة | Egypt Travel Explorer</p>
+      <p class="footer-credits">تصميم حصري عالي الفخامة بـ HTML5 و CSS3 فقط • بدون أي جافا سكربت (100% Pure HTML & CSS)</p>
+    </footer>
+
+  </div>
+
+  <!-- Pure CSS Modal: الشروط والأحكام (يفتح عبر :target) -->
+  <div id="terms-modal" class="css-modal">
+    <div class="modal-inner">
+      <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
+      <div class="modal-header">
+        <i class="fa-solid fa-scroll gold-text"></i>
+        <h3>شروط وأحكام حجز الرحلات</h3>
+      </div>
+      <div class="modal-content">
+        <p>1. <strong>تأكيد الحجز:</strong> يتم مراجعة الحجز فور إرسال الاستمارة والتواصل معك عبر الواتساب أو الهاتف خلال دقائق لتأكيد المواعيد النهائية.</p>
+        <p>2. <strong>الإلغاء والتعديل:</strong> الإلغاء مجاني بالكامل حتى 48 ساعة قبل موعد بدء الرحلة المقرر.</p>
+        <p>3. <strong>التأشيرات والدخول:</strong> تساعد شركتنا جميع المسافرين في إصدار تأشيرة الدخول الإلكترونية لمصر (Egypt E-Visa).</p>
+        <p>4. <strong>الأمان والراحة:</strong> جميع رحلاتنا وجولاتنا مرخصة بالكامل من وزارة السياحة والآثار المصرية.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="btn-modal-ok">فهمت وموافق</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure CSS Modal: رسالة النجاح بعد الإرسال (يفتح عبر :target) -->
+  <div id="booking-success" class="css-modal">
+    <div class="modal-inner ticket-style">
+      <a href="#!" class="modal-close" aria-label="إغلاق">&times;</a>
+      <div class="modal-header success-head">
+        <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+        <h3>تم استلام طلب حجزك بنجاح!</h3>
+        <p class="success-subtitle">أهلاً بك في أرض الحضارات! سنقوم بالتواصل معك لتأكيد جدول الرحلة.</p>
+      </div>
+      <div class="modal-content ticket-details">
+        <div class="ticket-row">
+          <span>حالة الحجز:</span>
+          <strong class="gold-text">مؤكد مبدئياً ✨</strong>
+        </div>
+        <div class="ticket-row">
+          <span>رقم المعاملة:</span>
+          <strong>#EG-2026-CONFIRM</strong>
+        </div>
+        <div class="ticket-row">
+          <span>المتابعة:</span>
+          <span>سيتصل بك مستشار الرحلة خلال 15 دقيقة</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="btn-modal-ok">العودة إلى الصفحة</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
